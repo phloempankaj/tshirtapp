@@ -26,40 +26,50 @@ export class AppComponent implements OnInit {
     return [
       {
         productId: 1,
-        imgUrlFront: "assets/images/allensollyf.jpeg",
-        imgUrlBack: "assets/images/allensollyb.jpeg",
+        imgUrlFront:
+          "https://raw.githubusercontent.com/phloempankaj/tshirtapp/master/src/assets/images/allensollyf.jpeg",
+        imgUrlBack:
+          "https://raw.githubusercontent.com/phloempankaj/tshirtapp/master/src/assets/images/allensollyb.jpeg",
         productName: "Allen Solly",
         price: 560,
         qty: 340,
       },
       {
         productId: 2,
-        imgUrlFront: "assets/images/patchef.jpeg",
-        imgUrlBack: "assets/images/patcheb.jpeg",
+        imgUrlFront:
+          "https://raw.githubusercontent.com/phloempankaj/tshirtapp/master/src/assets/images/patchef.jpeg",
+        imgUrlBack:
+          "https://raw.githubusercontent.com/phloempankaj/tshirtapp/master/src//assets/images/patcheb.jpeg",
         productName: "Patche",
         price: 260,
         qty: 40,
       },
       {
         productId: 3,
-        imgUrlFront: "assets/images/peterenglandf.jpeg",
-        imgUrlBack: "assets/images/peterenglandb.jpeg",
+        imgUrlFront:
+          "https://raw.githubusercontent.com/phloempankaj/tshirtapp/master/src/assets/images/peterenglandf.jpeg",
+        imgUrlBack:
+          "https://raw.githubusercontent.com/phloempankaj/tshirtapp/master/src/assets/images/peterenglandb.jpeg",
         productName: "Peter England",
         price: 450,
         qty: 140,
       },
       {
         productId: 4,
-        imgUrlFront: "assets/images/pumaf.jpeg",
-        imgUrlBack: "assets/images/pumab.jpeg",
+        imgUrlFront:
+          "https://raw.githubusercontent.com/phloempankaj/tshirtapp/master/src/assets/images/pumaf.jpeg",
+        imgUrlBack:
+          "https://raw.githubusercontent.com/phloempankaj/tshirtapp/master/src/assets/images/pumab.jpeg",
         productName: "Puma",
         price: 500,
         qty: 240,
       },
       {
         productId: 5,
-        imgUrlFront: "assets/images/tnxf.jpeg",
-        imgUrlBack: "assets/images/tnxb.jpeg",
+        imgUrlFront:
+          "https://raw.githubusercontent.com/phloempankaj/tshirtapp/master/src/assets/images/tnxf.jpeg",
+        imgUrlBack:
+          "https://raw.githubusercontent.com/phloempankaj/tshirtapp/master/src/assets/images/tnxb.jpeg",
         productName: "T.N.X",
         price: 250,
         qty: 95,
