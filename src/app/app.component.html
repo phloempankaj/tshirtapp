@@ -1,0 +1,56 @@
+<div class="toolbar" role="banner">
+  <img width="40" alt="Angular Logo"
+    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
+  <span>{{title}}</span>
+  <div class="spacer"></div>
+</div>
+
+<div class="content continer" role="main">
+  <br />
+  <div class="card">
+    <div class="card-header" style="background-color: blue;color:white">
+      Products
+      <div style="float:right;margin-left: 20px;">
+        <input type="text" class="form-control" style="height: 30px;" placeholder="Search" [(ngModel)]="searchPrice" />
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="table">
+        <thead>
+          <th>
+            Image
+          </th>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of products|productfilter:searchPrice" [ngClass]="{redrow:p.qty<100,bluerow:p.qty>=100}">
+            <td>
+              
+              <div (mouseover)="changeImage=true" (mouseout)="changeImage=false">
+                <span *ngIf="!changeImage">
+                  <img [src]='p.imgUrlFront' [width]='productImageWidth' [height]='productImageHeight' />
+                </span>
+                <span *ngIf="changeImage">
+                  <img [src]='p.imgUrlBack' [width]='productImageWidth' [height]='productImageHeight' />
+                </span>
+              </div>
+             
+            </td>
+            <td>
+              {{p.productName}}
+            </td>
+            <td>
+              {{p.price}}
+            </td>
+            <td>
+              {{p.qty}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <br />
+</div>
