@@ -27,7 +27,7 @@
         <tbody>
           <tr *ngFor="let p of products|productfilter:searchPrice" [ngClass]="{redrow:p.qty<100,bluerow:p.qty>=100}">
             <td>
-              
+              <!--
               <div (mouseover)="changeImage=true" (mouseout)="changeImage=false">
                 <span *ngIf="!changeImage">
                   <img [src]='p.imgUrlFront' [width]='productImageWidth' [height]='productImageHeight' />
@@ -36,7 +36,12 @@
                   <img [src]='p.imgUrlBack' [width]='productImageWidth' [height]='productImageHeight' />
                 </span>
               </div>
-             
+             -->
+             <img [src]='p.imgUrlFront'
+                  [width]='productImageWidth'
+                  [height]='productImageHeight'
+                  (mouseover)="flipImage($event,p.imgUrlBack)"
+                  (mouseout)="flipImage($event,p.imgUrlFront)" />
             </td>
             <td>
               {{p.productName}}

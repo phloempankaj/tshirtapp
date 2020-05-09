@@ -12,7 +12,6 @@ export class AppComponent implements OnInit {
   products: IProduct[];
   productImageWidth = 40;
   productImageHeight = 50;
-  showImage = false;
   changeImage: boolean;
   searchPrice: number;
 
@@ -20,6 +19,9 @@ export class AppComponent implements OnInit {
     this.products = this.getProducts();
   }
 
+  flipImage(e, imgurl) {
+    e.currentTarget.src = imgurl;
+  }
   getProducts() {
     return [
       {
